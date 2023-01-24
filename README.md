@@ -2,7 +2,7 @@
 # Laravel E-commerce
 
 This is an E-Commerce Project based on Laravel Framework With Laravel Breeze For Authentication.....
-#### Currently Under Construction (Project Start Time : 24/02/2023)
+#### Currently Under Construction (Project Start Time : 24/01/2023)
 
 
 ## Tech Stack

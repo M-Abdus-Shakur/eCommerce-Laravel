@@ -12,15 +12,18 @@ This is an E-Commerce Project based on Laravel Framework With Laravel Breeze For
 **Server:** PHP (Laravel), MySQL.
 
 
+
 ## Contributing
 
 Contributions are always welcome! :tada:
 
 I will be thankful to all of them who contribute to this e-commerce project and made better. :slightly_smiling_face:
 
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
 
 
 

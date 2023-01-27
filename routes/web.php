@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Livewire\AdminDashboardComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::middleware(['auth', 'is_admin'])->group(function () {
+    Route::prefix('/admin')->group(function () {
+        Route::get('/dashboard', AdminDashboardComponent::class);
+    });
+});
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -28,4 +37,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

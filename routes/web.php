@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'is_admin'])->group(function () {
     Route::prefix('/admin')->group(function () {
-        Route::get('/dashboard', AdminDashboardComponent::class);
+        Route::get('/dashboard', AdminDashboardComponent::class)->name('admin-dashboard');
     });
 });
 

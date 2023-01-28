@@ -26,12 +26,12 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="pages-account-settings-account.html" class="menu-link">
+                    <a href="{{route('admin-dashboard-allcategories')}}" class="menu-link">
                         <div data-i18n="All Categories">All Categories</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="pages-account-settings-notifications.html" class="menu-link">
+                    <a href="{{route('admin-dashboard-createcategories')}}" class="menu-link">
                         <div data-i18n="Create Categories">Create Categories</div>
                     </a>
                 </li>

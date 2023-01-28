@@ -67,21 +67,20 @@
 
                 <!-- Content wrapper -->
                 <div class="content-wrapper">
-
-                    <!-- Content -->
-
-
-                    {{ $slot }}
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <!-- Content -->
 
 
-                    <!--/ Content -->
+                        {{ $slot }}
 
 
-                    <!-- Footer -->
-                    @include('livewire._admin_partials._footer')
-                    <!-- / Footer -->
+                        <!--/ Content -->
 
-                    <div class="content-backdrop fade"></div>
+
+                        <!-- Footer -->
+                        @include('livewire._admin_partials._footer')
+                        <!-- / Footer -->
+                    </div>
                 </div>
                 <!-- Content wrapper -->
 

@@ -22,6 +22,7 @@ class CreateSubCategoriesComponent extends Component
             'category_name' => $category_name,
             'slug' => str()->slug($this->subcategory_name),
         ]);
+        Category::findOrFail($this->category_id)->increment('subcategory_count',1);
 
         session()->flash('success', 'Subcategory Added Successfully');
         $this->reset();

@@ -13,9 +13,11 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="category" class="form-label">Select Category</label>
+                        <label for="category_id" class="form-label">Select Category</label>
                         <select id="category_id" class="form-select" wire:model="category_id">
-                            <option value="1">One</option>
+                            @foreach ($categories as $category)
+                                <option value="{{$category->id}}">{{$category->category_name}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary">Save</button>

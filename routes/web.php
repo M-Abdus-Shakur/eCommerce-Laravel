@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Livewire\AdminDashboardComponent;
 use App\Http\Livewire\AllCategoriesComponent;
 use App\Http\Livewire\CreateCategoriesComponent;
+use App\Http\Livewire\UpdateCategoriesComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +28,7 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
         Route::get('/dashboard', AdminDashboardComponent::class)->name('admin-dashboard');
         Route::get('/dashboard/allcategories', AllCategoriesComponent::class)->name('admin-dashboard-allcategories');
         Route::get('/dashboard/createcategories', CreateCategoriesComponent::class)->name('admin-dashboard-createcategories');
+        Route::get('/dashboard/updatecategories/{category_id}', UpdateCategoriesComponent::class)->name('admin-dashboard-updatecategories');
     });
 });
 

@@ -17,12 +17,15 @@
                 @foreach ($categories as $category)
                     <tbody class="table-border-bottom-0">
                         <tr>
-                            <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{$category->category_name}}</strong></td>
-                            <td>{{$category->subcategory_count}}</td>
-                            <td>{{$category->product_count}}</td>
+                            <td><i class="fab fa-angular fa-lg text-danger me-3"></i>
+                                <strong>{{ $category->category_name }}</strong></td>
+                            <td>{{ $category->subcategory_count }}</td>
+                            <td>{{ $category->product_count }}</td>
                             <td>
-                                <a class="p-2" href=""><i class="bx bx-edit-alt me-1"></i>Edit</a>
-                                <a class="p-2" href="javascript:void(0)" wire:click="deleteCategory({{$category->id}})"><i class="bx bx-trash me-1"></i>Delete</a>
+                                <a class="p-2" href="{{ route('admin-dashboard-updatecategories', ['category_id' => $category->id]) }}"><i class="bx bx-edit-alt me-1"></i>Edit</a>
+                                <a class="p-2" href="javascript:void(0)"
+                                    wire:click="deleteCategory({{ $category->id }})"><i
+                                        class="bx bx-trash me-1"></i>Delete</a>
                             </td>
                         </tr>
                     </tbody>

@@ -8,6 +8,7 @@ use Livewire\Component;
 class CreateCategoriesComponent extends Component
 {
     public $category_name;
+
     public function addcategory(){
         $this->validate([
             'category_name' => 'required|unique:categories',
@@ -20,6 +21,7 @@ class CreateCategoriesComponent extends Component
         session()->flash('success','Category Added Successfully');
         $this->reset();
     }
+
     public function render()
     {
         return view('livewire.create-categories-component');

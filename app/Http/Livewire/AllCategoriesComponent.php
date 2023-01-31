@@ -11,8 +11,8 @@ class AllCategoriesComponent extends Component
 
     public function deleteCategory($id)
     {
-        Category::where('id',$id)->delete();
-        session()->flash('success','Category Deleted Successfully');
+        Category::where('id', $id)->delete();
+        session()->flash('success', 'Category Deleted Successfully');
     }
 
     public function render()

@@ -45,12 +45,12 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="pages-account-settings-account.html" class="menu-link">
+                    <a href="{{route('admin-dashboard-allsubcategories')}}" class="menu-link">
                         <div data-i18n="All Sub Categories">All SubCategories</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="pages-account-settings-notifications.html" class="menu-link">
+                    <a href="{{route('admin-dashboard-createsubcategories')}}" class="menu-link">
                         <div data-i18n="Create Sub Categories">Create Sub Categories</div>
                     </a>
                 </li>

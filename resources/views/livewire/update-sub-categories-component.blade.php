@@ -1,3 +1,3 @@
 <div>
-    {{-- The best athlete wants his opponent at his best. --}}
+    @include('livewire._create_update._update_subcategories_')
 </div>

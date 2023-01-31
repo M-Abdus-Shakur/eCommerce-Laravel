@@ -23,12 +23,16 @@
                             </td>
                             <td>{{ $subcategory->category_name }}</td>
                             <td>{{ $subcategory->product_count }}</td>
-                            {{-- <td>
-                                <a class="p-2" href="{{ route('admin-dashboard-updatecategories', ['subcategory_id' => $subcategories->id]) }}"><i class="bx bx-edit-alt me-1"></i>Edit</a>
+                            <td>
+                                 <a class="p-2"
+                                    href="{{ route('admin-dashboard-updatesubcategories', ['subcategory_id' => $subcategory->id]) }}">
+                                    <i class="bx bx-edit-alt me-1"></i>
+                                    Edit
+                                </a>
                                 <a class="p-2" href="javascript:void(0)"
-                                    wire:click="deleteSubcategory({{ $subcategories->id }})"><i
+                                    wire:click="deleteSubcategory({{ $subcategory->id }},{{$subcategory->category_id}})"><i
                                         class="bx bx-trash me-1"></i>Delete</a>
-                            </td> --}}
+                            </td>
                         </tr>
                     </tbody>
                 @endforeach

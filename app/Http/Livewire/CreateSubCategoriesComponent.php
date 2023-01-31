@@ -15,14 +15,14 @@ class CreateSubCategoriesComponent extends Component
             'subcategory_name' => 'required|unique:subcategories',
         ]);
 
-        $category_name = Category::findOrFail($this->category_id)->value('category_name');
+        $category_name = Category::findOrFail($this->category_id)->category_name;
         Subcategory::create([
             'subcategory_name' => $this->subcategory_name,
             'category_id' => $this->category_id,
             'category_name' => $category_name,
             'slug' => str()->slug($this->subcategory_name),
         ]);
-        Category::findOrFail($this->category_id)->increment('subcategory_count',1);
+        Category::findOrFail($this->category_id)->increment('subcategory_count', 1);
 
         session()->flash('success', 'Subcategory Added Successfully');
         $this->reset();

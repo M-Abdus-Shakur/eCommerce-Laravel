@@ -25,6 +25,7 @@ class UpdateCategoriesComponent extends Component
     {
         $category = Category::findOrFail($this->category_id);
         $category->category_name = $this->category_name;
+        $category->slug = str()->slug($this->category_name);
         $category->save();
         return redirect(route('admin-dashboard-allcategories'))->with('success','updated successfully');
     }

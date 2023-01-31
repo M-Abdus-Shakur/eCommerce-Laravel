@@ -11,7 +11,7 @@ class AllSubCategoriesComponent extends Component
 
     public function render()
     {
-        $this->subcategories = Subcategory::orderBy('id', 'desc')->get();
+        $this->subcategories = Subcategory::orderBy('created_at', 'desc')->get();
         return view('livewire.all-sub-categories-component');
     }
 }

@@ -33,8 +33,8 @@
                             <td>{{ $product->product_category_name }}</td>
                             <td>{{ $product->product_subcategory_name }}</td>
                             <td>
-                                {{-- <a class="p-2" href="{{ route('admin-dashboard-updatecategories', ['category_id' => $category->id]) }}"><i class="bx bx-edit-alt me-1"></i>Edit</a>
-                                <a class="p-2" href="javascript:void(0)"
+                                <a class="p-2" href="{{ route('admin-dashboard-updateproducts', ['product_id' => $product->id]) }}"><i class="bx bx-edit-alt me-1"></i>Edit</a>
+                                {{-- <a class="p-2" href="javascript:void(0)"
                                     wire:click="deleteCategory({{ $category->id }})"><i
                                         class="bx bx-trash me-1"></i>Delete</a> --}}
                             </td>

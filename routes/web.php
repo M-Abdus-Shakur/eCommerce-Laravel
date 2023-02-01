@@ -9,6 +9,7 @@ use App\Http\Livewire\CreateCategoriesComponent;
 use App\Http\Livewire\CreateProductComponent;
 use App\Http\Livewire\CreateSubCategoriesComponent;
 use App\Http\Livewire\UpdateCategoriesComponent;
+use App\Http\Livewire\UpdateProductsComponent;
 use App\Http\Livewire\UpdateSubCategoriesComponent;
 use Illuminate\Support\Facades\Route;
 
@@ -39,8 +40,9 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
         Route::get('/dashboard/createsubcategories', CreateSubCategoriesComponent::class)->name('admin-dashboard-createsubcategories');
         Route::get('/dashboard/updatesubcategories/{subcategory_id}', UpdateSubCategoriesComponent::class)->name('admin-dashboard-updatesubcategories');
 
-        Route::get('/dashboard/createproducts', CreateProductComponent::class)->name('admin-dashboard-createproducts');
         Route::get('/dashboard/allproducts', AllProductsComponent::class)->name('admin-dashboard-allproducts');
+        Route::get('/dashboard/createproducts', CreateProductComponent::class)->name('admin-dashboard-createproducts');
+        Route::get('/dashboard/updateproducts/{product_id}', UpdateProductsComponent::class)->name('admin-dashboard-updateproducts');
     });
 });
 

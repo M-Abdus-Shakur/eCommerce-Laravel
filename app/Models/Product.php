@@ -14,10 +14,11 @@ class Product extends Model
         'slug',
         'product_des',
         'price',
-        'product_img',
+        'product_image',
         'product_category_name',
         'product_subcategory_name',
         'product_category_id',
         'product_subcategory_id',
+        'product_quantity',
     ];
 }

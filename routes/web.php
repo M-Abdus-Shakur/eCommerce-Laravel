@@ -5,6 +5,7 @@ use App\Http\Livewire\AdminDashboardComponent;
 use App\Http\Livewire\AllCategoriesComponent;
 use App\Http\Livewire\AllSubCategoriesComponent;
 use App\Http\Livewire\CreateCategoriesComponent;
+use App\Http\Livewire\CreateProductComponent;
 use App\Http\Livewire\CreateSubCategoriesComponent;
 use App\Http\Livewire\UpdateCategoriesComponent;
 use App\Http\Livewire\UpdateSubCategoriesComponent;
@@ -36,6 +37,8 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
         Route::get('/dashboard/allsubcategories', AllSubCategoriesComponent::class)->name('admin-dashboard-allsubcategories');
         Route::get('/dashboard/createsubcategories', CreateSubCategoriesComponent::class)->name('admin-dashboard-createsubcategories');
         Route::get('/dashboard/updatesubcategories/{subcategory_id}', UpdateSubCategoriesComponent::class)->name('admin-dashboard-updatesubcategories');
+
+        Route::get('/dashboard/createproducts', CreateProductComponent::class)->name('admin-dashboard-createproducts');
     });
 });
 

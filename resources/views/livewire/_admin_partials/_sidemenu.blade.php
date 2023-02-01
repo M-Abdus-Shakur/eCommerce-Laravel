@@ -65,12 +65,12 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="pages-misc-error.html" class="menu-link">
+                    <a href="" class="menu-link">
                         <div data-i18n="All Products">All Products</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="pages-misc-error.html" class="menu-link">
+                    <a href="{{route('admin-dashboard-createproducts')}}" class="menu-link">
                         <div data-i18n="Create Products">Create Products</div>
                     </a>
                 </li>

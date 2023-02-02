@@ -26,17 +26,19 @@
                             <td>{{ $product->product_quantity }}</td>
                             <td>{{ $product->price }}</td>
                             <td>
-                                <img  src="{{ Storage::url($product->product_image) }}" alt="Product Image"
+                                <img src="{{ Storage::url($product->product_image) }}" alt="Product Image"
                                     class="rounded-circle" width="85px" height="85px" />
 
                             </td>
                             <td>{{ $product->product_category_name }}</td>
                             <td>{{ $product->product_subcategory_name }}</td>
                             <td>
-                                <a class="p-2" href="{{ route('admin-dashboard-updateproducts', ['product_id' => $product->id]) }}"><i class="bx bx-edit-alt me-1"></i>Edit</a>
-                                {{-- <a class="p-2" href="javascript:void(0)"
-                                    wire:click="deleteCategory({{ $category->id }})"><i
-                                        class="bx bx-trash me-1"></i>Delete</a> --}}
+                                <a class="p-2"
+                                    href="{{ route('admin-dashboard-updateproducts', ['product_id' => $product->id]) }}"><i
+                                        class="bx bx-edit-alt me-1"></i>Edit</a>
+                                <a class="p-2" href="javascript:void(0)"
+                                    wire:click="deleteProduct({{ $product->id }} , {{ $product->product_category_id }} , {{ $product->product_subcategory_id }})"><i
+                                        class="bx bx-trash me-1"></i>Delete</a>
                             </td>
                         </tr>
                     </tbody>

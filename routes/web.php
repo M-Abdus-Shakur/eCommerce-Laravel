@@ -11,6 +11,7 @@ use App\Http\Livewire\CreateSubCategoriesComponent;
 use App\Http\Livewire\UpdateCategoriesComponent;
 use App\Http\Livewire\UpdateProductsComponent;
 use App\Http\Livewire\UpdateSubCategoriesComponent;
+use App\Http\Livewire\Users\UserHomeComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,9 +25,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', UserHomeComponent::class)->name('user-home');
 
 
 Route::middleware(['auth', 'is_admin'])->group(function () {

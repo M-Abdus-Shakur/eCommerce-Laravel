@@ -3,11 +3,12 @@
 namespace App\Http\Livewire;
 
 use App\Models\Category;
+use App\Models\Subcategory;
 use Livewire\Component;
 
 class AllCategoriesComponent extends Component
 {
-    public $categories;
+    public $categories ,$subcategories;
 
     public function deleteCategory($id)
     {

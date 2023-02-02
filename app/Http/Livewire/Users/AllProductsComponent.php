@@ -6,14 +6,15 @@ use App\Models\Category;
 use App\Models\Product;
 use Livewire\Component;
 
-class UserHomeComponent extends Component
+class AllProductsComponent extends Component
 {
     public $categories;
     public $products;
+
     public function render()
     {
         $this->categories = Category::all();
-        $this->products = Product::orderBy('created_at', 'asc')->take(2)->get();
-        return view('livewire.users.user-home-component')->layout('layouts.user');
+        $this->products = Product::get();
+        return view('livewire.users.all-products-component')->layout('layouts.user');
     }
 }

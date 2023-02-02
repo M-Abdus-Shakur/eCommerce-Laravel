@@ -11,6 +11,7 @@ use App\Http\Livewire\CreateSubCategoriesComponent;
 use App\Http\Livewire\UpdateCategoriesComponent;
 use App\Http\Livewire\UpdateProductsComponent;
 use App\Http\Livewire\UpdateSubCategoriesComponent;
+use App\Http\Livewire\Users\AllProductsComponent as UsersAllProductsComponent;
 use App\Http\Livewire\Users\UserHomeComponent;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', UserHomeComponent::class)->name('user-home');
+Route::get('/allproducts', UsersAllProductsComponent::class)->name('user-all-products');
 
 
 Route::middleware(['auth', 'is_admin'])->group(function () {

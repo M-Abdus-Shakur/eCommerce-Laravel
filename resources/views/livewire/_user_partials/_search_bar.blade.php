@@ -19,6 +19,6 @@
     </div>
     <div class="ms-2">
         <p class="mb-0 font-13">CALL US NOW</p>
-        <h5 class="mb-0">+880 17947-48960</h5>
+        <h5 class="mb-0">+880 00000-00000</h5>
     </div>
 </div>

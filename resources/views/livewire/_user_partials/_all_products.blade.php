@@ -60,10 +60,8 @@
                                 <div class="d-flex flex-wrap flex-grow-1 gap-1">
                                     <div class="d-flex align-items-center flex-nowrap">
                                         <p class="mb-0 font-13 text-nowrap">Sort By:</p>
-                                        <select class="form-select ms-3 rounded-0">
-                                            <option value="menu_order" selected="selected">Default sorting</option>
-                                            <option value="popularity">Sort by popularity</option>
-                                            <option value="rating">Sort by average rating</option>
+                                        <select class="form-select ms-3 rounded-0" wire:model="sorting">
+                                            <option value="default" selected="selected">Default sorting</option>
                                             <option value="date">Sort by newness</option>
                                             <option value="price">Sort by price: low to high</option>
                                             <option value="price-desc">Sort by price: high to low</option>
@@ -73,10 +71,11 @@
                                 <div class="d-flex flex-wrap">
                                     <div class="d-flex align-items-center flex-nowrap">
                                         <p class="mb-0 font-13 text-nowrap">Show:</p>
-                                        <select class="form-select ms-3 rounded-0">
-                                            <option>9</option>
-                                            <option>12</option>
-                                            <option>16</option>
+                                        <select class="form-select ms-3 rounded-0" wire:model="pagesize">
+                                            <option>&</option>
+                                            <option>5</option>
+                                            <option>10</option>
+                                            <option>15</option>
                                             <option>20</option>
                                             <option>50</option>
                                             <option>100</option>

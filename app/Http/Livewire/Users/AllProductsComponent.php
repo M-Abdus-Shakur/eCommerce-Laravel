@@ -18,7 +18,7 @@ class AllProductsComponent extends Component
     {
         $this->categories = Category::all();
         return view('livewire.users.all-products-component',[
-            'products' => Product::paginate(1),
+            'products' => Product::paginate(6),
         ])->layout('layouts.user');
     }
 }

@@ -60,7 +60,6 @@
 	<script src="{{ asset('user-assets/plugins/OwlCarousel/js/owl.carousel2.thumbs.min.js') }}"></script>
 	<script src="{{ asset('user-assets/plugins/metismenu/js/metisMenu.min.js') }}"></script>
 	<script src="{{ asset('user-assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
-    <script src="{{ asset('user-assets/js/price-slider.js') }}"></script>
 	<!--app JS-->
 	<script src="{{ asset('user-assets/js/app.js') }}"></script>
 	<script src="{{ asset('user-assets/js/index.js') }}"></script>

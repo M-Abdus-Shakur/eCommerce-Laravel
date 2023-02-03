@@ -9,6 +9,9 @@ use Livewire\WithPagination;
 
 class AllProductsComponent extends Component
 {
+    use WithPagination;
+
+    protected $paginationTheme = 'bootstrap';
     public $categories;
 
     public function render()

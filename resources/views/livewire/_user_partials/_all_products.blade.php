@@ -9,7 +9,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb mb-0 p-0">
                                 <li class="breadcrumb-item">
-                                    <a href="{{route('user-home')}}">
+                                    <a href="{{ route('user-home') }}">
                                         <i class="bx bx-home-alt"></i>
                                         Home
                                     </a>
@@ -150,33 +150,7 @@
                             </div>
                             <hr>
                             <nav class="d-flex justify-content-between" aria-label="Page navigation">
-                                <ul class="pagination">
-                                    <li class="page-item"><a class="page-link" href="javascript:;"><i
-                                                class='bx bx-chevron-left'></i> Prev</a>
-                                    </li>
-                                </ul>
-                                <ul class="pagination">
-                                    <li class="page-item active d-none d-sm-block" aria-current="page"><span
-                                            class="page-link">1<span class="visually-hidden">(current)</span></span>
-                                    </li>
-                                    <li class="page-item d-none d-sm-block"><a class="page-link"
-                                            href="javascript:;">2</a>
-                                    </li>
-                                    <li class="page-item d-none d-sm-block"><a class="page-link"
-                                            href="javascript:;">3</a>
-                                    </li>
-                                    <li class="page-item d-none d-sm-block"><a class="page-link"
-                                            href="javascript:;">4</a>
-                                    </li>
-                                    <li class="page-item d-none d-sm-block"><a class="page-link"
-                                            href="javascript:;">5</a>
-                                    </li>
-                                </ul>
-                                <ul class="pagination">
-                                    <li class="page-item"><a class="page-link" href="javascript:;"
-                                            aria-label="Next">Next <i class='bx bx-chevron-right'></i></a>
-                                    </li>
-                                </ul>
+                                {{ $products->links() }}
                             </nav>
                         </div>
                     </div>

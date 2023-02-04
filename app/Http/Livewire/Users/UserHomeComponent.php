@@ -13,7 +13,7 @@ class UserHomeComponent extends Component
     public function render()
     {
         $this->categories = Category::all();
-        $this->products = Product::orderBy('created_at', 'asc')->take(2)->get();
+        $this->products = Product::orderBy('created_at', 'ASC')->take(2)->get();
         return view('livewire.users.user-home-component')->layout('layouts.user');
     }
 }

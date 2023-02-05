@@ -12,7 +12,7 @@ class ProductsByCategoryComponent extends Component
     use WithPagination;
 
     protected $paginationTheme = 'bootstrap';
-    public $categories, $sorting, $pagesize;
+    public $categories, $sorting, $pagesize , $category_name;
     public $slug;
 
     public function mount($slug)
@@ -25,6 +25,7 @@ class ProductsByCategoryComponent extends Component
         $this->categories = Category::all();
         $category = Category::where('slug',$this->slug)->first();
         $category_id = $category->id;
+        $this->category_name = $category->category_name;
 
 
         if ($this->sorting == 'date') {

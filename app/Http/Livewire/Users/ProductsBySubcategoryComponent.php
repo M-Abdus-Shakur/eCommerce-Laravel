@@ -24,11 +24,6 @@ class ProductsBySubcategoryComponent extends Component
         $this->category_id = $category_id;
     }
 
-    public function gotoBack()
-    {
-        return redirect()->back();
-    }
-
     public function render()
     {
         $this->categories = Category::all();

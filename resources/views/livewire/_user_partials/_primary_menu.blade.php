@@ -19,7 +19,8 @@
 
 
                         @foreach ($categories as $category)
-                            <li><a class="dropdown-item dropdown-toggle dropdown-toggle-nocaret" href="#">
+                            <li>
+                                <a href="{{ route('user-all-products-by-category', ['slug' => $category->slug]) }}" class="dropdown-item">
                                     {{ $category->category_name }}
                                     <i class='bx bx-chevron-right float-end'></i>
                                 </a>

@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Users;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Subcategory;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -14,6 +15,7 @@ class ProductsByCategoryComponent extends Component
     protected $paginationTheme = 'bootstrap';
     public $categories, $sorting, $pagesize , $category_name;
     public $slug;
+    public $subcategories;
 
     public function mount($slug)
     {
@@ -26,7 +28,7 @@ class ProductsByCategoryComponent extends Component
         $category = Category::where('slug',$this->slug)->first();
         $category_id = $category->id;
         $this->category_name = $category->category_name;
-
+        $this->subcategories = Subcategory::where('category_id',$category_id)->get();
 
         if ($this->sorting == 'date') {
             $products = Product::where('product_category_id',$category_id)->orderBy('created_at', 'DESC')->paginate($this->pagesize);

@@ -4,8 +4,7 @@
         <section class="py-3 border-bottom border-top d-none d-md-flex bg-light">
             <div class="container">
                 <div class="page-breadcrumb d-flex align-items-center">
-                    <h3 class="breadcrumb-title pe-3">All Products from <span class="strong text-success"> [
-                            {{ $category_name }} ] </span>Category</h3>
+                    <h3 class="breadcrumb-title pe-3">All Products from <span class="strong text-success"> [ {{$category_name}} ] </span>Category</h3>
                     <div class="ms-auto">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb mb-0 p-0">
@@ -15,13 +14,13 @@
                                         Home
                                     </a>
 
-                                <li class="breadcrumb-item">
+                                    <li class="breadcrumb-item">
 
                                     <a class="breadcrumb-item" href="{{ route('user-all-products') }}">
                                         All Products
                                     </a>
 
-                                <li class="breadcrumb-item active" aria-current="page">{{ $category_name }}</li>
+                                <li class="breadcrumb-item active" aria-current="page">{{$category_name}}</li>
                             </ol>
                         </nav>
                     </div>
@@ -52,28 +51,6 @@
                                                     <a
                                                         href="{{ route('user-all-products-by-category', ['slug' => $category->slug]) }}">
                                                         {{ $category->category_name }}
-                                                        <span
-                                                            class="float-end badge rounded-pill bg-primary">{{ $category->product_count }}</span>
-                                                    </a>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                    <hr class="d-flex d-xl-none" />
-                                    <div class="product-categories">
-                                        <u>
-                                            <h6 class="text-uppercase mb-3 ">Subcategories of
-                                                <span class="text-success">
-                                                    {{ $category_name }}
-                                                </span>
-                                            </h6>
-                                        </u>
-                                        <ul class="list-unstyled mb-0 categories-list">
-                                            @foreach ($subcategories as $subcategory)
-                                                <li>
-                                                    <a
-                                                        href="{{ route('user-all-products-by-category', ['slug' => $category->slug]) }}">
-                                                        {{ $subcategory->subcategory_name }}
                                                         <span
                                                             class="float-end badge rounded-pill bg-primary">{{ $category->product_count }}</span>
                                                     </a>

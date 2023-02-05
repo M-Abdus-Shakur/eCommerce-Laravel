@@ -30,6 +30,7 @@ class ProductsBySubcategoryComponent extends Component
         $subcategory = Subcategory::where('slug',$this->slug)->first();
         $subcategory_id = $subcategory->id;
         $this->subcategory_name = $subcategory->subcategory_name;
+        $this->category_name = $subcategory->category_name;
 
         $this->subcategories = Subcategory::where('category_id',$this->category_id)->get();
 

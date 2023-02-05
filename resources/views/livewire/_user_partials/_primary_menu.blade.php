@@ -27,7 +27,7 @@
                                 <ul class="submenu dropdown-menu">
                                     @foreach ($category->subcategory as $subcategory)
                                         <li>
-                                            <a class="dropdown-item" href="shop-grid-left-sidebar.html">
+                                            <a class="dropdown-item" href="{{ route('user-all-products-by-subcategory', ['category_id' => $subcategory->category_id , 'slug' => $subcategory->slug]) }}">
                                                 {{ $subcategory->subcategory_name }}
                                             </a>
                                         </li>

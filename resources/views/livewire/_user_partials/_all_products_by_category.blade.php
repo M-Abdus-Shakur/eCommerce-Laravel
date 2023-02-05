@@ -40,14 +40,14 @@
                                         <h6 class="text-uppercase mb-3">Categories</h6>
                                         <ul class="list-unstyled mb-0 categories-list">
                                             @foreach ($categories as $category)
-                                            <li>
-                                                <a
-                                                    href="{{ route('user-all-products-by-category', ['slug' => $category->slug]) }}">
-                                                    {{ $category->category_name }}
-                                                    <span
-                                                        class="float-end badge rounded-pill bg-primary">{{ $category->product_count }}</span>
-                                                </a>
-                                            </li>
+                                                <li>
+                                                    <a
+                                                        href="{{ route('user-all-products-by-category', ['slug' => $category->slug]) }}">
+                                                        {{ $category->category_name }}
+                                                        <span
+                                                            class="float-end badge rounded-pill bg-primary">{{ $category->product_count }}</span>
+                                                    </a>
+                                                </li>
                                             @endforeach
                                         </ul>
                                     </div>

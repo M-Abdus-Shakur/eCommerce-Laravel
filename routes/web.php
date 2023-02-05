@@ -31,7 +31,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', UserHomeComponent::class)->name('user-home');
 Route::get('/allproducts', UsersAllProductsComponent::class)->name('user-all-products');
 Route::get('/allproducts/category/{slug}', ProductsByCategoryComponent::class)->name('user-all-products-by-category');
-Route::get('/allproducts/category/subcategory/{slug}', ProductsBySubcategoryComponent::class)->name('user-all-products-by-subcategory');
+Route::get('/allproducts/category/subcategory/{category_id}/{slug}', ProductsBySubcategoryComponent::class)->name('user-all-products-by-subcategory');
 
 
 Route::middleware(['auth', 'is_admin'])->group(function () {

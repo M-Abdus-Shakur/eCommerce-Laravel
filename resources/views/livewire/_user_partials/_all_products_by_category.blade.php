@@ -71,11 +71,12 @@
                                         <ul class="list-unstyled mb-0 categories-list">
                                             @foreach ($subcategories as $subcategory)
                                                 <li>
-                                                    <a
-                                                        href="{{ route('user-all-products-by-category', ['slug' => $category->slug]) }}">
+                                                    <a href="{{ route('user-all-products-by-subcategory', ['category_id' => $subcategory->category_id , 'slug' => $subcategory->slug]) }}">
                                                         {{ $subcategory->subcategory_name }}
-                                                        <span
-                                                            class="float-end badge rounded-pill bg-primary">{{ $category->product_count }}</span>
+
+                                                        <span class="float-end badge rounded-pill bg-primary">
+                                                            {{ $subcategory->product_count }}
+                                                        </span>
                                                     </a>
                                                 </li>
                                             @endforeach

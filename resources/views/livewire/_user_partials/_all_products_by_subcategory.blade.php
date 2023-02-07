@@ -66,7 +66,8 @@
                                         <ul class="list-unstyled mb-0 categories-list">
                                             @foreach ($subcategories as $subcategory)
                                                 <li>
-                                                    <a href="{{ route('user-all-products-by-subcategory', ['category_id' => $subcategory->category_id, 'slug' => $subcategory->slug]) }}">
+                                                    <a
+                                                        href="{{ route('user-all-products-by-subcategory', ['category_id' => $subcategory->category_id, 'slug' => $subcategory->slug]) }}">
                                                         {{ $subcategory->subcategory_name }}
                                                         <span class="float-end badge rounded-pill bg-primary">
                                                             {{ $subcategory->product_count }}
@@ -157,10 +158,11 @@
                                                             <div class="d-grid gap-2">
                                                                 <a href="javascript:;" class="btn btn-dark btn-ecomm">
                                                                     <i class="bx bxs-cart-add"></i>Add to Cart</a>
-                                                                <a href="javascript:;" class="btn btn-light btn-ecomm"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#QuickViewProduct"><i
-                                                                        class="bx bx-zoom-in"></i>Quick View</a>
+                                                                <a href="{{ route('user-view-single-product', ['id' => $product->id]) }}"
+                                                                    class="btn btn-light btn-ecomm">
+                                                                    <i class="bx bx-zoom-in"></i>
+                                                                    View Product
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     </div>

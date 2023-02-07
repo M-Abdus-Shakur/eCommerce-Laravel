@@ -15,6 +15,7 @@ use App\Http\Livewire\Users\AllProductsComponent as UsersAllProductsComponent;
 use App\Http\Livewire\Users\ProductsByCategoryComponent;
 use App\Http\Livewire\Users\ProductsBySubcategoryComponent;
 use App\Http\Livewire\Users\UserHomeComponent;
+use App\Http\Livewire\Users\ViewSingleProductComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,7 +33,7 @@ Route::get('/', UserHomeComponent::class)->name('user-home');
 Route::get('/allproducts', UsersAllProductsComponent::class)->name('user-all-products');
 Route::get('/allproducts/category/{slug}', ProductsByCategoryComponent::class)->name('user-all-products-by-category');
 Route::get('/allproducts/category/subcategory/{category_id}/{slug}', ProductsBySubcategoryComponent::class)->name('user-all-products-by-subcategory');
-
+Route::get('/singleproduct/{id}', ViewSingleProductComponent::class)->name('user-view-single-product');
 
 Route::middleware(['auth', 'is_admin'])->group(function () {
     Route::prefix('/admin')->group(function () {

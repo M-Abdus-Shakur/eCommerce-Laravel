@@ -40,14 +40,14 @@
                                         <h6 class="text-uppercase mb-3">Categories</h6>
                                         <ul class="list-unstyled mb-0 categories-list">
                                             @foreach ($categories as $category)
-                                            <li>
-                                                <a
-                                                    href="{{ route('user-all-products-by-category', ['slug' => $category->slug]) }}">
-                                                    {{ $category->category_name }}
-                                                    <span
-                                                        class="float-end badge rounded-pill bg-primary">{{ $category->product_count }}</span>
-                                                </a>
-                                            </li>
+                                                <li>
+                                                    <a
+                                                        href="{{ route('user-all-products-by-category', ['slug' => $category->slug]) }}">
+                                                        {{ $category->category_name }}
+                                                        <span
+                                                            class="float-end badge rounded-pill bg-primary">{{ $category->product_count }}</span>
+                                                    </a>
+                                                </li>
                                             @endforeach
                                         </ul>
                                     </div>
@@ -132,10 +132,10 @@
                                                             <div class="d-grid gap-2">
                                                                 <a href="javascript:;" class="btn btn-dark btn-ecomm">
                                                                     <i class="bx bxs-cart-add"></i>Add to Cart</a>
-                                                                <a href="javascript:;" class="btn btn-light btn-ecomm"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#QuickViewProduct"><i
-                                                                        class="bx bx-zoom-in"></i>Quick View</a>
+                                                                <a href="{{route('user-view-single-product',['id' => $product->id])}}" class="btn btn-light btn-ecomm">
+                                                                    <i class="bx bx-zoom-in"></i>
+                                                                    View Product
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     </div>
